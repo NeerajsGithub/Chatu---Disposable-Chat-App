@@ -14,7 +14,7 @@ function App() {
   const socket = useRef(null);
   const [currentRoom,setCurentRoom] = useState(null)
   useEffect(() => {
-    socket.current = io('http://localhost:5000', { transports: ['websocket'] });
+    socket.current = io('https://chatu-server.onrender.com', { transports: ['websocket'] });
   
     return () => {
       if (socket.current) {
